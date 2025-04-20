@@ -15,6 +15,11 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 # Replace 'src/main.cpp' with the actual path to your source files
 add_executable(${PROJECT_NAME}
     src/main.cpp
+    src/glad.c
+    src/Shader/Shader.cpp
+    src/VAO/VAO.cpp
+    src/VBO/VBO.cpp
+    src/EBO/EBO.cpp
     lib/stb_image/stb.cpp
 )
 
@@ -24,7 +29,12 @@ add_executable(${PROJECT_NAME}
 
 # Link libraries
 # Uncomment and specify libraries if your project depends on any
-target_link_libraries(${PROJECT_NAME} PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/lib/libglfw3.a ${CMAKE_CURRENT_SOURCE_DIR}/lib/libGLEW.a)
+target_link_libraries(
+    ${PROJECT_NAME} PRIVATE
+    ${CMAKE_CURRENT_SOURCE_DIR}/lib/libglfw3.a
+    # ${CMAKE_CURRENT_SOURCE_DIR}/lib/libGLEW.a
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/glad.c
+)
 
 find_package(OpenGL REQUIRED)
 target_link_libraries(${PROJECT_NAME} PRIVATE OpenGL::GL)
