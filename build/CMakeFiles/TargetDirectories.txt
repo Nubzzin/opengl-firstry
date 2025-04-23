@@ -1,3 +1,0 @@
-/home/nubsdre/Documents/code/TUTORIALS/computer-graphics/tutorial6/build/CMakeFiles/build.dir
-/home/nubsdre/Documents/code/TUTORIALS/computer-graphics/tutorial6/build/CMakeFiles/edit_cache.dir
-/home/nubsdre/Documents/code/TUTORIALS/computer-graphics/tutorial6/build/CMakeFiles/rebuild_cache.dir
